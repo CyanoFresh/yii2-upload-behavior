@@ -236,9 +236,6 @@ class FileUploadBehavior extends \yii\base\Behavior
      */
     public function getUploadedFileUrl($attribute)
     {
-        if (!$this->owner->{$attribute})
-            return null;
-
         $behavior = static::getInstance($this->owner, $attribute);
         return $behavior->resolvePath($behavior->fileUrl);
     }
