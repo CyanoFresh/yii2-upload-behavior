@@ -91,9 +91,6 @@ class ImageUploadBehavior extends FileUploadBehavior
      */
     public function getImageFileUrl($attribute, $emptyUrl = null)
     {
-        if (!$this->owner->{$attribute})
-            return $emptyUrl;
-
         return $this->getUploadedFileUrl($attribute);
     }
 
