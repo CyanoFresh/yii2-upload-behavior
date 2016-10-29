@@ -62,7 +62,7 @@ class FileUploadBehavior extends \yii\base\Behavior
             return;
         }
         $this->file = UploadedFile::getInstance($this->owner, $this->attribute);
-        
+
         if (empty($this->file)) {
             $this->file = UploadedFile::getInstanceByName($this->attribute);
         }
@@ -198,8 +198,8 @@ class FileUploadBehavior extends \yii\base\Behavior
     public function getUploadedFilePath($attribute)
     {
         $behavior = static::getInstance($this->owner, $attribute);
-        if (!$this->owner->{$attribute})
-            return '';
+//        if (!$this->owner->{$attribute})
+//            return '';
         return $behavior->resolvePath($behavior->filePath);
     }
 
